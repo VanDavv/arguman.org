@@ -10,7 +10,7 @@ services:
     image: postgres
   web:
     build: .
-    command: bash -c "python web/manage.py migrate && python web/manage.py runserver 0.0.0.0:8000"
+    command: bash -c "sleep 5 && python web/manage.py migrate && python web/manage.py runserver 0.0.0.0:8000"
     volumes:
       - .:/code
     ports:
